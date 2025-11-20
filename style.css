@@ -1,0 +1,10 @@
+.tab.current-tab{
+    background-color: #4CAF50; /* Green background for the current tab */
+    color: white; /* White text color for better contrast */
+    border-radius: 4px;
+}
+.form-container.acitve{
+    scale:1;
+    opacity:1;
+    display: flex;
+}
