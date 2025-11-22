@@ -56,6 +56,7 @@ function getFromSessionStorage(){
 }
 
 async function fetchUserWeatherInfo(coordinates){
+  
  const {lat,lon}=coordinates;
       
       grantAccessContainer.classList.remove("active");  
@@ -90,10 +91,10 @@ function renderWeatherInfo(weatherInfo){
   countryIcon.src=`https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
   desc.innerText=weatherInfo?.weather?.[0]?.description;
   weatherIcon.src=`http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
-  temp.innerText= weatherInfo?.main?.temp;
-  windSpeed.innerText=weatherInfo?.wind?.speed;
-  humidity.innerText=weatherInfo?.main?.humidity;
-  cloudiness.innerText=weatherInfo?.clouds?.all;
+  temp.innerText= `${weatherInfo?.main?.temp} c°`;
+  windSpeed.innerText=`${weatherInfo?.wind?.speed} m/s`;
+  humidity.innerText=`${weatherInfo?.main?.humidity} %`;
+  cloudiness.innerText=`${weatherInfo?.clouds?.all} %`;
 
 }
 
